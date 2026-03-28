@@ -2,7 +2,9 @@
 
 A Bluetooth adapter for the IBM Model M PS/2 keyboard. The adapter converts PS/2 signals from the keyboard to HID signals that are sent over Bluetooth to a computer.
 
-<img width="678" height="1548" alt="image" src="https://github.com/user-attachments/assets/d4fe22b2-d67e-4fff-8d34-20a02ad64e25" style="width:25%; height:auto;" />
+<div align="center">
+<img width="998" height="418" alt="image" src="https://github.com/user-attachments/assets/9076a641-6884-419a-bb47-6db0c778eb45" style="width:50%; height:auto;"  />
+</div>
 
 ---
 
@@ -18,7 +20,9 @@ When I started this project I wanted to create a wireless way for my IBM Model M
 
 My first attempt was to replace the control board on my keyboard entirely with a custom solution. The main advantage of this method was power efficiency — the giant microcontroller in the Model M is very old and eats energy. When plugged into a desktop this doesn't cause a problem, but on a limited battery it could be an issue.
 
+<div align="center">
 <img width="1162" height="1548" alt="image" src="https://github.com/user-attachments/assets/fb792cf8-607d-4a84-bc80-c35942a87bc6" style="width:25%; height:auto;"/>
+</div>
 
 After some initial testing I chose to scrap this idea for a few reasons:
 
@@ -26,7 +30,9 @@ After some initial testing I chose to scrap this idea for a few reasons:
 - The membrane requires 26 GPIO ports to interface with the matrix. This was doable with an I2C GPIO extender, but it made the breadboarded prototype very difficult to debug since each connection was a new point of failure.
 - It required using terrible membrane connectors.
 
+<div align="center">
 <img width="1162" height="684" alt="image" src="https://github.com/user-attachments/assets/281c3934-a48e-44d8-9f98-18a39830995e" style="width:25%; height:auto;"/>
+</div>
 
 ---
 
@@ -34,8 +40,10 @@ After some initial testing I chose to scrap this idea for a few reasons:
 
 My second iteration was creating an adapter that plugs into the Model M's PS/2 output. This was very convenient because I could cut one head off an existing adapter and directly break out the wiring. This solution is easy to wire and test because the PS/2 standard only has 4 wires: Data, Clock, 5V, and GND.
 
+<div align="center">
 <img width="1106" height="1514" alt="image" src="https://github.com/user-attachments/assets/3b665f21-dc4f-45f4-b874-ffda703eee45" style="width:25%; height:auto;"/>
 <img width="1600" height="1548" alt="image" src="https://github.com/user-attachments/assets/49bc11cf-7210-4cac-a5da-6700cc1a4665" style="width:25%; height:auto;"/>
+</div>
 
 For this project I chose to use the **Adafruit Feather ESP32**. I chose this microcontroller because it has built-in Bluetooth and a built-in battery circuit, and it was only around $8 — great for my budget.
 
@@ -43,8 +51,10 @@ One problem I didn't realize when picking it was that the Model M and the PS/2 s
 
 Since reading 5V on the Feather would destroy the microcontroller, I use **voltage dividers** on the Data and Clock lines. Each divider consists of 3 resistors of equal resistance, with two wired in series.
 
+<div align="center">
 <img width="1162" height="1548" alt="image" src="https://github.com/user-attachments/assets/8acb4d83-12d7-4a02-a896-2a17bf06d497" style="width:25%; height:auto;"/>
 <img width="1162" height="1548" alt="image" src="https://github.com/user-attachments/assets/39bac22a-8372-4f2a-a254-4f36f4ea87f7" style="width:25%; height:auto;"/>
+</div>
 
 ---
 
