@@ -69,6 +69,9 @@ When attaching the voltage booster I re-wired the rest of the board to be more d
 <img width="1672" height="760" alt="image" src="https://github.com/user-attachments/assets/6aeb7560-d0d7-4a34-8dd3-e8d1ac15c7f3" style="width:30%; height:auto;"/>
 <img width="1402" height="988" alt="image" src="https://github.com/user-attachments/assets/58d34c32-cf6c-4b62-a2de-d62a2a05b88c" style="width:30%; height:auto;"/>
 
+
+
+
 I also have been working on making a single PCB for the design to continue improving its durability and decreasing size unfortunatly it is a little out of my budget and I don't have the tools I will need to assemble it so that portion will be tabled for now.
 
 here are my schematics and layouts:
