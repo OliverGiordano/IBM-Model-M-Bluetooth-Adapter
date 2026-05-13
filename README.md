@@ -58,6 +58,27 @@ Since reading 5V on the Feather would destroy the microcontroller, I use **volta
 
 ---
 
+## Updates
+
+Fixing the issue of the Feather not being able to supply 5V for the keyboard, I updated my design to include a voltage booster. The voltage booster I choose to use was the MT3608, a voltage booster that could vary output with a variable resistor.  I connected it to a PSU and set the PSU to 3.3V, then used a multimeter to mesure the voltage as I adjusted the resistor.
+
+<img width="770" height="594" alt="image" src="https://github.com/user-attachments/assets/bc71cc03-0915-4527-85a4-aae7414e2a17" style="width:25%; height:auto;"/>
+
+When attaching the voltage booster I re-wired the rest of the board to be more durrable and fit into a smaller space, here was my final build front and back:
+
+<img width="1672" height="760" alt="image" src="https://github.com/user-attachments/assets/6aeb7560-d0d7-4a34-8dd3-e8d1ac15c7f3" style="width:30%; height:auto;"/>
+<img width="1402" height="988" alt="image" src="https://github.com/user-attachments/assets/58d34c32-cf6c-4b62-a2de-d62a2a05b88c" style="width:30%; height:auto;"/>
+
+I also have been working on making a single PCB for the design to continue improving its durability and decreasing size unfortunatly it is a little out of my budget and I don't have the tools I will need to assemble it so that portion will be tabled for now.
+
+here are my schematics and layouts:
+
+<img width="1006" height="689" alt="image" src="https://github.com/user-attachments/assets/112ae25c-35be-471f-8899-3fc52587e020" />
+<img width="961" height="521" alt="image" src="https://github.com/user-attachments/assets/1040b7ed-4342-4842-8b79-02adb984d938" />
+
+
+---
+
 ## Software
 
 The code uses 3 libraries:
